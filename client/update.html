@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+
+<body>
+    <br> <br>
+    <div class="container">
+        <form ng-submit="updateEntry()">
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="id" class="form-label">Id</label>
+                        <select class="form-select form-select-lg" ng-model="id" id="" required ng-options="data.id for data in datas" ng-change="getId()">
+                            <option selected disabled value="">Select one</option>
+                        </select>
+                    </div>
+                    <div class="offset-md-1 col-md-7">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" ng-model="name" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" ng-model="amount" class="form-control" required>
+                    </div>
+                    <div class="offset-md-1 col-md-7">
+                        <label for="orVal" class="form-label">Email</label>
+                        <input type="email" ng-model="email" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="item" class="form-label">Item</label>
+                        <input type="text" ng-model="item" class="form-control" required>
+                    </div>
+                    <div class="offset-md-1 col-md-7">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Order Status</label>
+                            <select class="form-select form-select-lg" ng-model="status" id="" required>
+                                <option selected disabled value="">Select one</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="In transit">In Transit</option>
+                                <option value="Failed">Failed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+                <input type="submit" value="Update" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

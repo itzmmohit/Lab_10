@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <form ng-submit="getData()">
+        <div class="mb-3 mt-4">
+            <label for="delete" class="form-label" style="margin-left: 16%;">Select Order Status</label>
+            <select class="form-select form-select-lg" ng-model="status" id="" required ng-change="getData()" style="width: 70%; margin-left: 15%;">
+                <option selected disabled value="">Select one</option>
+                <option value="Delivered">Delivered</option>
+                <option value="In transit">In Transit</option>
+                <option value="Failed">Failed</option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-center">
+            <input type="submit" value="Search" class="btn btn-info" />
+        </div>
+        </form>
+        <section id="tableSection" class="container mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in datas">
+                        <td scope="row">{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.item}}</td>
+                        <td>{{data.amount}}</td>
+                        <td>{{data.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

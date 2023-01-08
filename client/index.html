@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab10</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js" integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0;
+            padding: 0;
+        }
+        .main_1{
+            background-color: rgb(40, 42, 42);
+            width: 100%;
+            height: 28px;
+            padding-top: 2px;
+            padding-left: 40%;
+        }
+        #tableSection {
+            font-size: 1.1em;
+        }
+
+        #tableSection table {
+            background-color: rgba(255, 255, 255, 0.315);
+        }
+
+        #tableSection table, #tableSection td, #tableSection th{
+            border: 1px solid;
+        }
+
+        #tableSection th{
+            cursor: pointer;
+            color: white;
+            border-color: black;
+        }
+    </style>
+</head>
+<body style="background-color: grey;">
+    <!-- Angular App -->
+    <div ng-app="myApp">
+        <div  class="main_1">
+            <a style="text-decoration: none; color: red; text-align: left; padding-left: 10px;" href="#/">View&nbsp;&nbsp;</a>
+            <a style="text-decoration: none; color: red; text-align: center;" href="#create">&nbsp;&nbsp;Create&nbsp;&nbsp;</a>
+            <a style="text-decoration: none; color: red; text-align: center;" href="#delete">&nbsp;&nbsp;Delete&nbsp;&nbsp;</a>
+            <a style="text-decoration: none; color: red; text-align: center;" href="#update">&nbsp;&nbsp;Update&nbsp;&nbsp;</a>
+            <a style="text-decoration: none; color: red; text-align: center;" href="#search">&nbsp;&nbsp;Search</a> <br>
+        </div>
+        <ng-view style="height: 613px;"></ng-view>
+    </div>
+    <!-- Angular App -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
